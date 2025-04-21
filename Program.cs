@@ -102,4 +102,44 @@ namespace CyberChatBotPOEPart1
 
                 while (true)
                 {
-                   
+                    Console.Write("You: ");
+                    string input = Console.ReadLine().ToLower();
+
+                    if (input.Contains("how are you"))
+                    {
+                        Console.WriteLine("Bot: I’m just code, but I’m functioning perfectly!");
+                    }
+                    else if (input.Contains("purpose"))
+                    {
+                        Console.WriteLine("Bot: I help you learn about cybersecurity and how to stay safe online.");
+                    }
+                    else if (input.Contains("password"))
+                    {
+                        Console.WriteLine("Bot: Always use a mix of letters, numbers, and symbols. Avoid using the same password across sites.");
+                    }
+                    else if (input.Contains("phishing"))
+                    {
+                        Console.WriteLine("Bot: Phishing is when scammers try to trick you into giving personal info. Don’t click on suspicious links!");
+                    }
+                    else if (input.Contains("safe browsing"))
+                    {
+                        Console.WriteLine("Bot: Make sure websites use HTTPS, avoid downloading unknown files, and keep your browser updated.");
+                    }
+                    else if (input.Contains("tip"))
+                    {
+                        Console.WriteLine("Bot: Enable two-factor authentication wherever possible for added security.");
+                    }
+                    else if (input == "exit")
+                    {
+                        Console.WriteLine("Bot: Goodbye! Stay safe online.");
+                        return;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Bot: Sorry, I didn’t understand that. Could you rephrase?");
+                    }
+                }
+            }
+        }
+    }
+}
