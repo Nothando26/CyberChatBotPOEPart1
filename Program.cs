@@ -95,6 +95,7 @@ namespace CyberChatBotPOEPart1
 ************************************************************");
                 Console.ResetColor();
             }
+            // Chatbot prompts and responses
             static void ShowMenu(string userName)
             {
                 Console.WriteLine($"\n{userName}, how can I help you today? Ask me anything about cybersecurity!");
