@@ -13,28 +13,7 @@ namespace CyberChatBotPOEPart1
     {
         class CyberChatbot
         {
-            static void Main()
-            {
-                // 1. Voice Greeting
-                PlayVoiceGreeting();
-
-                // 2. ASCII Logo
-                DisplayAsciiLogo();
-
-                // 3. Text Welcome Banner
-                ShowTextWelcomeBanner();
-
-                // 4. User Name Input and Greeting
-                Console.Write("\nWhat is your name: ");
-                string userName = Console.ReadLine();
-                Console.WriteLine($"\nWelcome, {userName}! I'm your Cybersecurity Awareness Bot.\n");
-
-                // 5. Menu
-                ShowMenu(userName);
-
-
-
-            }
+            
 
             static void PlayVoiceGreeting()
             {
