@@ -40,6 +40,7 @@ namespace CyberChatBotPOEPart1
             {
                 try
                 {
+                    //Voice greeting code
                     string fileName = "greeting.wav";
                     string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
 
