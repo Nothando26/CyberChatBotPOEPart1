@@ -8,42 +8,42 @@ using System.IO;
 
 namespace CyberChatBotPOEPart1
 {
-
     internal class Program
     {
         class CyberChatbot
         {
             static void Main()
             {
-                // 1. Voice Greeting
+                // 1. Play welcome sound
                 PlayVoiceGreeting();
 
-                // 2. ASCII Logo
+                // 2. Show robot art
+                DisplayAsciiRobot();
+
+                // 3. Show title/logo
                 DisplayAsciiLogo();
 
-                // 3. Text Welcome Banner
+                // 4. Show welcome banner
                 ShowTextWelcomeBanner();
 
-                // 4. User Name Input and Greeting
+                // 5. Ask for user name and greet them
                 Console.Write("\nWhat is your name: ");
                 string userName = Console.ReadLine();
                 Console.WriteLine($"\nWelcome, {userName}! I'm your Cybersecurity Awareness Bot.\n");
 
-                // 5. Menu
+                // 6. Start chatbot menu
                 ShowMenu(userName);
-
-
-
             }
 
             static void PlayVoiceGreeting()
             {
                 try
                 {
-                    //Voice greeting code
+                    // Set file name for sound
                     string fileName = "greeting.wav";
                     string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
 
+                    // Check if file exists
                     if (!File.Exists(fullPath))
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
@@ -52,6 +52,7 @@ namespace CyberChatBotPOEPart1
                         return;
                     }
 
+                    // Play sound
                     using (SoundPlayer player = new SoundPlayer(fullPath))
                     {
                         Console.WriteLine("[*] Playing voice greeting...");
@@ -60,15 +61,40 @@ namespace CyberChatBotPOEPart1
                 }
                 catch (Exception ex)
                 {
+                    // Show error if sound doesn't work
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("\n[!] Error playing audio: " + ex.Message);
                     Console.ResetColor();
                 }
             }
 
+            static void DisplayAsciiRobot()
+            {
+                // Show robot picture made with text
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine(@"
+           ______
+         /|_||_\`.__
+        (   _    _ _\
+        =`-(_)--(_)-'
+          .-'````'-.   
+         /  .--.  \ \ 
+        |  |o_o | | |
+        |  |:_/ | | |
+       //\/    \/\ \\
+      (|   |    |   |)
+     /'\_/'\__/'\_/'\
+     \___)|===(___/
+        |_|   |_|
+      _/((   ))\_
+     \__/\___/\__/
+");
+                Console.ResetColor();
+            }
 
             static void DisplayAsciiLogo()
             {
+                // Show logo made with text
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine(@"
    ______      __                                        _ __           ___                                                   ____        __ 
@@ -85,6 +111,7 @@ namespace CyberChatBotPOEPart1
 
             static void ShowTextWelcomeBanner()
             {
+                // Show welcome banner
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 Console.WriteLine(@"
 ************************************************************
@@ -95,7 +122,8 @@ namespace CyberChatBotPOEPart1
 ************************************************************");
                 Console.ResetColor();
             }
-            // Chatbot prompts and responses
+
+            // This is the chatbot menu where user can ask questions
             static void ShowMenu(string userName)
             {
                 Console.WriteLine($"\n{userName}, how can I help you today? Ask me anything about cybersecurity!");
@@ -108,39 +136,25 @@ namespace CyberChatBotPOEPart1
 
                     if (input.Contains("how are you"))
                     {
-                        Console.WriteLine("Bot: I’m just code, but I’m functioning perfectly!");
+                        // Friendly response
+                        Console.WriteLine("Bot: I’m great!, and how are you today?");
                     }
                     else if (input.Contains("purpose"))
                     {
-                        Console.WriteLine("Bot: I help you learn about cybersecurity and how to stay safe online.");
+                        // Explains bot's job
+                        Console.WriteLine("Bot: My purpose is to educate and guide users about cybersecurity—covering topics like password safety, phishing awareness, safe browsing practices, and general tips to protect your digital life.");
                     }
                     else if (input.Contains("password"))
                     {
-                        Console.WriteLine("Bot: Always use a mix of letters, numbers, and symbols. Avoid using the same password across sites.");
+                        // Password advice
+                        Console.WriteLine("Bot: A strong password includes a mix of uppercase and lowercase letters, numbers, and special characters. Avoid using easily guessed info like birthdays or names, and never reuse the same password across different websites. Consider using a password manager to keep track of them securely.");
                     }
                     else if (input.Contains("phishing"))
                     {
-                        Console.WriteLine("Bot: Phishing is when scammers try to trick you into giving personal info. Don’t click on suspicious links!");
+                        // Explains phishing
+                        Console.WriteLine("Bot: Phishing is a type of online scam where attackers impersonate trustworthy entities—like banks or services—to trick you into giving up sensitive info. They often use fake emails, texts, or websites. Always double-check links and sender addresses, and never enter personal info on suspicious pages.");
                     }
                     else if (input.Contains("safe browsing"))
                     {
-                        Console.WriteLine("Bot: Make sure websites use HTTPS, avoid downloading unknown files, and keep your browser updated.");
-                    }
-                    else if (input.Contains("tip"))
-                    {
-                        Console.WriteLine("Bot: Enable two-factor authentication wherever possible for added security.");
-                    }
-                    else if (input == "exit")
-                    {
-                        Console.WriteLine("Bot: Goodbye! Stay safe online.");
-                        return;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Bot: Sorry, I didn’t understand that. Could you rephrase?");
-                    }
-                }
-            }
-        }
-    }
-}
+                        // Safe browsing tips
+                        Console.WriteLine("Bot: Safe browsing means practicing good habits like only visiting trusted websites, checking for HTTPS in the URL, avoiding pop-up ads and strange downloads, and keeping
