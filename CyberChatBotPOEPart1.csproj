@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsciiArt.cs" />
+    <Compile Include="AudioManager.cs" />
+    <Compile Include="ChatBot.cs" />
+    <Compile Include="CyberChatBot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
