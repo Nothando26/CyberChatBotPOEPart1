@@ -157,4 +157,26 @@ namespace CyberChatBotPOEPart1
                     else if (input.Contains("safe browsing"))
                     {
                         // Safe browsing tips
-                        Console.WriteLine("Bot: Safe browsing means practicing good habits like only visiting trusted websites, checking for HTTPS in the URL, avoiding pop-up ads and strange downloads, and keeping
+                        Console.WriteLine("Bot: Safe browsing means practicing good habits like only visiting trusted websites, checking for HTTPS in the URL, avoiding pop-up ads and strange downloads, and keeping your browser and antivirus software up to date. It’s your digital hygiene!");
+                    }
+                    else if (input.Contains("tip"))
+                    {
+                        // Bonus tip
+                        Console.WriteLine("Bot: Here’s a tip: Always enable two-factor authentication (2FA) on your accounts. It adds an extra layer of protection by requiring a second verification step, such as a code sent to your phone or an app confirmation, even if someone steals your password.");
+                    }
+                    else if (input == "exit")
+                    {
+                        // Exit message
+                        Console.WriteLine("Bot: Goodbye! Remember, cybersecurity is a shared responsibility. Stay alert and stay safe!");
+                        return;
+                    }
+                    else
+                    {
+                        // If input is not recognized
+                        Console.WriteLine("Bot: Hmm, I didn’t quite get that. Try asking about things like 'password safety', 'phishing', or 'safe browsing'.");
+                    }
+                }
+            }
+        }
+    }
+}
