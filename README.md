@@ -3,34 +3,55 @@
 https://github.com/Nothando26/CyberChatBotPOEPart1.git
 
 # Chatbot description
-This C# console application is a Cybersecurity Awareness Chatbot designed to educate users on key cybersecurity topics in an interactive and friendly manner. When the program starts, it plays a voice greeting from a local audio file (greeting.wav), displays an ASCII art logo, and shows a colorful welcome banner. The user is then prompted to enter their name, after which the chatbot greets them personally and presents a simple menu-based interaction. Users can type in questions or keywords such as "password," "phishing," or "safe browsing," and the bot responds with helpful tips and explanations. The conversation continues in a loop until the user types "exit" to end the session. The chatbot aims to make cybersecurity knowledge accessible and engaging for everyone.
+This program is a Cybersecurity Awareness Chatbot designed to simulate a natural, flowing conversation with users to help them learn about key cybersecurity topics such as phishing, scams, passwords, malware, privacy, and safety tips. It begins by greeting the user, asking for their name, and checking how they're feeling. Based on the user’s emotional input, the bot responds empathetically—whether the user is confused, curious, anxious, or excited. It then invites the user to ask questions about cybersecurity, where it uses keyword recognition to detect topics and provide tailored responses. For each topic, the bot explains the concept in a friendly tone and offers to share more information if the user is interested. It remembers topics the user says they’re interested in and brings them up later in the conversation to keep the interaction personalized and meaningful. Additionally, it handles errors smoothly by guiding users toward relevant cybersecurity topics and responds appropriately if the user is unsure or confused, asking whether they would like further clarification. Overall, the chatbot creates an engaging, supportive, and educational experience aimed at increasing cybersecurity awareness in a conversational way.
+
+
 
 # How to Run the Chatbot
 
-Ensure that the greeting.wav file is located in the same folder as the program executable.
+Step-by-Step Interaction
+Greeting
+The bot greets you with a friendly message and displays some ASCII art and audio effects (if included).
 
-Double-click CyberChatBotPOEPart1.exe or run it via a command prompt.
+Name Input
+You’ll be asked to enter your name. The bot uses this for personalization.
 
-Wait for the voice greeting to play.
+Emotional Check-In
+The bot asks how you're feeling (e.g., “I’m feeling curious” or “I’m confused”). It will respond accordingly with empathy or encouragement.
 
-View the ASCII logo and welcome banner.
+Help Request
+The bot then asks, “How can I help you today?” prompting you to ask about cybersecurity topics.
 
-Enter your name when prompted.
+Ask Questions
+You can ask things like:
 
-Begin chatting with the bot by typing questions or keywords.
+What is phishing?
 
-Sample Interaction
+What are scams?
 
-When prompted:
-What is your name: Lisa
-→ Welcome, Lisa! I'm your Cybersecurity Awareness Bot.
+Tell me about malware.
 
-Type messages such as:
+Give me a tip.
 
-"What is phishing?"
+How do I protect my privacy?
 
-"Give me a password tip."
+How do I use a password safely?
 
-"How do I browse safely?"
+Follow-Up Prompts
+After answering, the bot may ask:
+"Would you like to learn more about [topic]?"
+Respond with “yes” or “no”.
 
-The bot will respond with helpful advice based on your input
+Interest Memory
+If you say you're interested in a topic (e.g., “I’m interested in phishing”), the bot will remember it and bring it up later during the conversation.
+
+Sentiment Recognition
+If you say something like “I’m confused” during the conversation, the bot will:
+
+Acknowledge your feelings.
+
+Re-explain the last discussed topic (if applicable).
+
+Ask if you’d like further help.
+
+Exit
